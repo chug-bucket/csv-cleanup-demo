@@ -6,11 +6,12 @@ Requires Python 3. No third-party packages, network access, or paid services.
 
 Run:
 
-    python clean_csv.py example.csv cleaned.csv --key email
+    python clean_csv.py example.csv result.csv --key email
 
 It trims surrounding whitespace, drops fully blank records, and keeps the first record for each case-insensitive, nonempty email. Missing email records are retained. Repeat `--key` for composite keys (all must be present to deduplicate). Header names are exact and case-sensitive. All values remain strings, preserving leading zeros. Embedded commas and newlines follow CSV quoting rules. Input is unchanged; an existing output is never overwritten. Malformed column counts are rejected before writing.
 
 Expected sample report: 5 input records, 3 output records, 1 duplicate, 1 blank record.
+The included `cleaned.csv` shows the expected output. Use a new output filename on each run; the tool intentionally refuses to overwrite files.
 
 Run the included checks:
 
