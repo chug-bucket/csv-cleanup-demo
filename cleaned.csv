@@ -1,0 +1,4 @@
+email,name,zip,notes
+alex@example.test,Alex,01234,"Asked for quote, then called"
+,Jordan,00123,Missing email retained
+,Sam,00456,Another missing email retained
